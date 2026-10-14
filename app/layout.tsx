@@ -1,8 +1,16 @@
+import type { Metadata } from "next"
 import { Geist, Geist_Mono, Inter } from "next/font/google"
 
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
+
+export const metadata: Metadata = {
+  title: "Yomi — Voice Teleprompter",
+  description:
+    "Free voice-activated teleprompter. Reads your script aloud and auto-scrolls as you speak. Supports Web Speech API and local Whisper AI.",
+  keywords: ["teleprompter", "voice", "speech", "whisper", "yomi"],
+}
 
 const geistHeading = Geist({subsets:['latin'],variable:'--font-heading'});
 
